@@ -1,13 +1,73 @@
 {
-    "plumbers": [],
-    "completions": [],
-    "requests": [
-        {
-            "id": 1,
-            "description": "Aut sint voluptatem fugit eius quas molestiae modi.",
-            "address": "34445 Bianka Ports",
-            "budget": 400,
-            "neededBy": "2021-08-27"
-        }
-    ]
+  "plumbers": [
+    {
+      "id": 1,
+      "name": "Maude"
+    },
+    {
+      "id": 2,
+      "name": "Merle"
+    }
+  ],
+  "completions": [
+    {
+      "requestId": 2,
+      "plumberId": 2,
+      "date_created": 1685736290676,
+      "id": 1
+    },
+    {
+      "requestId": 1,
+      "plumberId": 2,
+      "date_created": 1685737367656,
+      "id": 2
+    }
+  ],
+  "requests": [
+    {
+      "id": 1,
+      "description": "Aut sint voluptatem fugit eius quas molestiae modi.",
+      "address": "34445 Bianka Ports",
+      "budget": 400,
+      "neededBy": "2021-08-27",
+      "completed": true,
+      "visible": false
+    },
+    {
+      "id": 2,
+      "description": "Need help fixing a leaking pipe in the kitchen.",
+      "address": "123 Main Street",
+      "budget": 200,
+      "neededBy": "2021-09-10",
+      "visible": true,
+      "completed": false
+    },
+    {
+      "id": 3,
+      "description": "Looking for someone to unclog the bathroom drain.",
+      "address": "987 Elm Avenue",
+      "budget": 150,
+      "neededBy": "2021-09-05",
+      "visible": true,
+      "completed": false
+    },
+    {
+      "id": 4,
+      "description": "Require assistance in installing a new toilet.",
+      "address": "567 Oak Lane",
+      "budget": 300,
+      "neededBy": "2021-09-15",
+      "visible": true,
+      "completed": false
+    },
+    {
+      "id": 5,
+      "description": "Seeking help with repairing a burst pipe in the basement.",
+      "address": "246 Elm Street",
+      "budget": 500,
+      "neededBy": "2021-09-03",
+      "visible": true,
+      "completed": false
+    }
+  ]
 }
