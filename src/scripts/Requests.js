@@ -43,9 +43,9 @@ mainContainer.addEventListener(
 const convertRequestToListElement = (request) => {
     const plumbers = getPlumbers();
     return `
-            <li ${request.completed ? `style="background: red; color: white"` : `style="background: white"`}>
-                ${request.description}
-                <select class="plumbers" id="plumbers">
+            <div class="request row" ${request.completed ? `style="background: red; color: white"` : `style="background: white"`}>
+                <p class="column column-1">${request.description}</p>
+                <select class="plumbers column column-2" id="plumbers">
                     <option value="">Choose</option>
                     ${plumbers.map(
         plumber => {
@@ -54,11 +54,11 @@ const convertRequestToListElement = (request) => {
     ).join("")
         }
                 </select>
-                <button class="request__delete"
+                <button class="request__delete column column-3"
                         id="request--${request.id}">
                     Delete
                 </button>
-            </li>
+            </div>
         `
 }
 
@@ -66,10 +66,15 @@ export const Requests = () => {
     const requests = getRequests()
 
     let html = `
-        <ul>
+        <div class="grid">
+            <div class="row">
+                <h3 id="list-header-description" class="column column-1">Description</h3>
+                <h3 id="list-header-completed-by" class="column column-2">Completed By</h3>
+                <h3 id="list-header-empty" class="column column-3"></h3>
+            </div>    
             ${requests.map(convertRequestToListElement).join("")
         }
-        </ul>
+        </div>
     `
 
     return html
